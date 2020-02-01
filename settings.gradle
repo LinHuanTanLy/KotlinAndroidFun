@@ -1,2 +1,2 @@
-include ':app', ':comm', ':base', ':login'
+include ':app', ':comm', ':base', ':login', ':share'
 rootProject.name='kotlinModuleApp'

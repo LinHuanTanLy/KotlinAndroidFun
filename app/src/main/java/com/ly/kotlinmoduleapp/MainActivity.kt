@@ -18,5 +18,9 @@ class MainActivity : AppCompatActivity() {
         tvMainToLogin.setOnClickListener {
             ARouter.getInstance().build("/login/ac").navigation()
         }
+        tvMainToShare.setOnClickListener {
+            ARouter.getInstance().build("/share/mainAc").navigation()
+//            ARouter.getInstance().build("/share/ac").navigation()
+        }
     }
 }

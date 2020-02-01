@@ -25,6 +25,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+
+        sourceCompatibility JavaVersion.VERSION_1_8
+
+        targetCompatibility JavaVersion.VERSION_1_8
+
+    }
+
 }
 kapt {
     arguments {
@@ -37,5 +45,8 @@ dependencies {
     implementation project(path: ':comm')
     if (isLoginModule.toBoolean()) {
         implementation project(path: ':login')
+    }
+    if (isShareModule.toBoolean()) {
+        implementation project(path: ':share')
     }
 }

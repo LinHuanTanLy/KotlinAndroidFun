@@ -4,25 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ShareAc">
 
     <TextView
-        android:id="@+id/tvMainToLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="去往登录页面"
+        android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvMainToShare"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="去往分享页面"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvMainToLogin" />
 </androidx.constraintlayout.widget.ConstraintLayout>
