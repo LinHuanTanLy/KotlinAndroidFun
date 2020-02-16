@@ -3,6 +3,7 @@ package com.ly.comm.net
 import android.content.Context
 import com.blankj.utilcode.util.LogUtils
 import com.orhanobut.logger.Logger
+import io.reactivex.functions.Function
 import okhttp3.Cache
 import okhttp3.Interceptor
 import okhttp3.Interceptor.Companion.invoke
@@ -82,5 +83,15 @@ class Api private constructor() {
         Logger.json(buffer.clone().readString(Charset.forName("UTF-8")))
 
         response
+    }
+
+
+    /**
+     * 变换
+     */
+    class HandleFuc<T> : Function<BasicResponse<T>, T> {
+        override fun apply(basicResponse: BasicResponse<T>): T? {
+            return basicResponse.data
+        }
     }
 }

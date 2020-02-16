@@ -4,7 +4,7 @@
 
     <application android:allowBackup="true">
 
-        <activity android:name=".LoginAc" />
+        <activity android:name=".ac.LoginAc" />
     </application>
 
 </manifest>
