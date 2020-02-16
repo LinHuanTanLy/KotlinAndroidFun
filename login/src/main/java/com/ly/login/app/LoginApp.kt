@@ -1,11 +1,11 @@
 package com.ly.login.app
 
 import android.app.Application
-import com.ly.base.BaseApp
+import com.ly.base.CommBaseApp
 import com.ly.comm.ServiceFactory
 import com.ly.login.service.UserInfoService
 
-class LoginApp : BaseApp() {
+class LoginApp : CommBaseApp() {
 
     override fun onCreate() {
         super.onCreate()

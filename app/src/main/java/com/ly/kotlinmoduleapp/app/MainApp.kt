@@ -2,10 +2,13 @@ package com.ly.kotlinmoduleapp.app
 
 import android.app.Application
 import com.alibaba.android.arouter.launcher.ARouter
+import com.blankj.utilcode.util.ApiUtils
 import com.ly.base.BaseApp
+import com.ly.base.CommBaseApp
 import com.ly.base.appConf.GlobalAppConf
+import com.ly.comm.net.Api
 
-class MainApp : BaseApp() {
+class MainApp : CommBaseApp() {
     override fun initModuleApp(application: Application) {
         for (app in GlobalAppConf.appList) {
             val clazz = Class.forName(app)
@@ -27,7 +30,7 @@ class MainApp : BaseApp() {
         ARouter.init(this)
         ARouter.openLog()
         ARouter.openDebug()
-
+        Api.getInstance().init(this)
         initModuleApp(this)
         initModuleData(this)
     }
