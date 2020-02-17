@@ -15,5 +15,6 @@ class ShareAc : AppCompatActivity() {
 
         val isLogin = ServiceFactory.instance.accountService?.userStringId()
         tvShareShowUser.text = isLogin.toString()
+
     }
 }

@@ -21,7 +21,13 @@ class LoginAc : BaseActivity<ILogin.View, LoginPresenter>(), ILogin.View {
     override fun getContentView() = R.layout.activity_login
 
     override fun initData(savedInstanceState: Bundle?) {
-        presenter.getChapters()
+//        presenter.getChapters()
+        btLogin.setOnClickListener {
+            presenter.login()
+        }
+        btLogout.setOnClickListener {
+            presenter.logout()
+        }
     }
 
     override fun initView(savedInstanceState: Bundle?) {
